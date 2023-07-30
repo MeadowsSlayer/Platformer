@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gjtu5hx1nm8q"]
+
+[ext_resource type="SpriteFrames" uid="uid://3md2q08jh76" path="res://Resources/SpriteFrames/Rune.tres" id="1_oaq8g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf171"]
+size = Vector2(16, 32)
+
+[node name="Rune" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pf171")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("1_oaq8g")
+frame_progress = 0.688985

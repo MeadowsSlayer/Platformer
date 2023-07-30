@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://3md2q08jh76"]
+
+[ext_resource type="Texture2D" uid="uid://djipwetip16fa" path="res://Sprites/SwampTileset/4 Animated objects/Rune.png" id="1_rbhp3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s03or"]
+atlas = ExtResource("1_rbhp3")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h835k"]
+atlas = ExtResource("1_rbhp3")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oi6ee"]
+atlas = ExtResource("1_rbhp3")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvnl3"]
+atlas = ExtResource("1_rbhp3")
+region = Rect2(48, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s03or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h835k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oi6ee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvnl3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

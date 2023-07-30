@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 window/stretch/mode="viewport"
 
+[gui]
+
+theme/custom_font="res://Sprites/GUI_Essential_Free_v1.1/Font/TTF/Toriko.ttf"
+
 [input]
 
 left={

@@ -1,6 +1,10 @@
+res://Scenes/Levels/Level1/Level1.tscn
+res://Resources/KindaCuteForestTileset.tres
+res://Resources/SpriteFrames/PlayerSF.tres
+res://Resources/SpriteFrames/Rune.tres
+res://Resources/SpriteFrames/Coin.tres
+res://Resources/LabelSettings/WorldText.tres
 res://Scenes/MainMenu/MainMenu.tscn
 res://Objects/Player/Player.tscn
-res://Resources/SpriteFrames/PlayerSF.tres
-res://Scenes/Levels/Level1/Level1.tscn
-res://Resources/DefaultTileset.tres
-res://Objects/Player/Player.gd
+res://Objects/Pickable Items/Coin.tscn
+res://Objects/Pickable Items/Rune.tscn

@@ -1,2 +1,2 @@
-TileSet
 SpriteFrames
+TileSet
