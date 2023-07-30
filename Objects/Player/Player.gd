@@ -17,6 +17,7 @@ var coyote_time = true
 @onready var coyote_timer = $CoyoteTimer
 @onready var mid_air_timer = $MidAirTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
+@onready var tile_map = $"../TileMap"
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -81,6 +82,10 @@ func Jump():
 	jumping = true
 	sprite.play("jump")
 	velocity.y = JUMP_VELOCITY
+
+func _input(event):
+	if event.is_action_pressed("skill"):
+		tile_map.set_layer_enabled(2, true)
 
 func _on_coyote_timer_timeout():
 	coyote_time = false
