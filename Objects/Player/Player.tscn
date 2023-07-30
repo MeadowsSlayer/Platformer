@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c48qntvlfi1ar"]
+
+[ext_resource type="Script" path="res://Objects/Player/Player.gd" id="1_abguc"]
+[ext_resource type="SpriteFrames" uid="uid://babv5jqi3y8qq" path="res://Resources/SpriteFrames/PlayerSF.tres" id="1_say5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8rpg"]
+size = Vector2(16, 56)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_abguc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_h8rpg")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("1_say5y")
+animation = &"idle"
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="MidAirTimer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="_on_coyote_timer_timeout"]
+[connection signal="timeout" from="JumpBufferTimer" to="." method="_on_jump_buffer_timer_timeout"]
+[connection signal="timeout" from="MidAirTimer" to="." method="_on_mid_air_timer_timeout"]
