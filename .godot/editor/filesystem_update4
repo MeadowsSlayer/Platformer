@@ -3,7 +3,6 @@ res://Resources/KindaCuteForestTileset.tres
 res://Resources/SpriteFrames/PlayerSF.tres
 res://Resources/SpriteFrames/Rune.tres
 res://Resources/SpriteFrames/Coin.tres
-res://Resources/LabelSettings/WorldText.tres
 res://Scenes/MainMenu/MainMenu.tscn
 res://Objects/Player/Player.tscn
 res://Objects/Pickable Items/Coin.tscn

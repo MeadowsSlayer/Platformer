@@ -7,6 +7,7 @@ const MAX_SPEED = 250.0
 var speed = 0.0
 var jumps = 1
 var gravity = 0
+var runes = 0
 var mid_air = false
 var falling = false
 var jumping = false
@@ -84,8 +85,12 @@ func Jump():
 	velocity.y = JUMP_VELOCITY
 
 func _input(event):
-	if event.is_action_pressed("skill"):
+	if event.is_action_pressed("Blue"):
 		tile_map.set_layer_enabled(2, true)
+		tile_map.set_layer_enabled(3, false)
+	if event.is_action_pressed("Red"):
+		tile_map.set_layer_enabled(2, false)
+		tile_map.set_layer_enabled(3, true)
 
 func _on_coyote_timer_timeout():
 	coyote_time = false
@@ -97,3 +102,9 @@ func _on_jump_buffer_timer_timeout():
 func _on_mid_air_timer_timeout():
 	mid_air = false
 	falling = true
+
+func _on_area_2d_area_entered(area):
+	if area.is_in_group("Rune"):
+		runes += 1
+		area.queue_free()
+		tile_map.set_layer_enabled(5, true)

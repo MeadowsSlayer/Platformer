@@ -1,27 +1,29 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690748000
+::res://::1690796952
 icon.svg::CompressedTexture2D::9164202520055673838::1690711847::1690711856::1::::<><>::
 README.md::TextFile::-1::1690712158::0::1::::<><>::
 ::res://Objects/::1690746392
-::res://Objects/Pickable Items/::1690747991
-Coin.tscn::PackedScene::7168357103854646958::1690747991::0::1::::<><>::uid://b2yphv7t2uhhp::::res://Resources/SpriteFrames/Coin.tres
-Rune.tscn::PackedScene::440903387949813706::1690747991::0::1::::<><>::uid://3md2q08jh76::::res://Resources/SpriteFrames/Rune.tres
-::res://Objects/Player/::1690747991
-Player.gd::GDScript::-1::1690741229::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6877438016869502249::1690747991::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
-::res://Resources/::1690747893
-DefaultTileset.tres::TileSet::1210620544307270007::1690740938::0::1::::<><>::uid://0k7iri8lo0qo::::res://Sprites/SwampTileset/1 Tiles/Tileset.png<>uid://2g4jgvp2n4dq::::res://Sprites/Tileset Platform - Basic/Tileset Platform - Basic/Free.png
-KindaCuteForestTileset.tres::TileSet::8290793788592374965::1690747893::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
-::res://Resources/SpriteFrames/::1690746482
-Coin.tres::SpriteFrames::4331988936790484169::1690746397::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
-PlayerSF.tres::SpriteFrames::2389814189941308212::1690739088::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
-Rune.tres::SpriteFrames::58537982436258163::1690746482::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
+::res://Objects/Pickable Items/::1690752238
+Coin.tscn::PackedScene::7168357103854646958::1690752238::0::1::::<><>::uid://b2yphv7t2uhhp::::res://Resources/SpriteFrames/Coin.tres
+Rune.tscn::PackedScene::440903387949813706::1690752238::0::1::::<><>::uid://3md2q08jh76::::res://Resources/SpriteFrames/Rune.tres
+::res://Objects/Player/::1690752238
+Player.gd::GDScript::-1::1690748981::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6877438016869502249::1690752238::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
+::res://Resources/::1690748106
+DefaultTileset.tres::TileSet::1210620544307270007::1690740938::0::1::::<><>::uid://0k7iri8lo0qo
+KindaCuteForestTileset.tres::TileSet::8290793788592374965::1690748106::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
+::res://Resources/LabelSettings/::1690748106
+WorldText.tres::LabelSettings::6544158630561557426::1690748106::0::1::::<><>::
+::res://Resources/SpriteFrames/::1690748106
+Coin.tres::SpriteFrames::4331988936790484169::1690748106::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
+PlayerSF.tres::SpriteFrames::2389814189941308212::1690748106::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
+Rune.tres::SpriteFrames::58537982436258163::1690748106::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
 ::res://Scenes/::1690712469
 ::res://Scenes/Levels/::1690712481
-::res://Scenes/Levels/Level1/::1690747991
-Level1.tscn::PackedScene::8539346648995564901::1690747991::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn
-::res://Scenes/MainMenu/::1690747991
-MainMenu.tscn::PackedScene::1114247250053051678::1690747991::0::1::::<><>::
+::res://Scenes/Levels/Level1/::1690752585
+Level1.tscn::PackedScene::8539346648995564901::1690752585::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn<>uid://c0iblpbbtl3cw::::res://Resources/LabelSettings/WorldText.tres
+::res://Scenes/MainMenu/::1690752237
+MainMenu.tscn::PackedScene::1114247250053051678::1690752237::0::1::::<><>::
 ::res://Sprites/::1690740355
 AnimationSheet_Character.png::CompressedTexture2D::3339387889943430242::1690717039::1690717272::1::::<><>::
 Heart&ManaUi.png::CompressedTexture2D::2834605993007682680::1690717067::1690717272::1::::<><>::

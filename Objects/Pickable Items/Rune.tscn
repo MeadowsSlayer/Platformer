@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf171"]
 size = Vector2(16, 32)
 
-[node name="Rune" type="Area2D"]
+[node name="Rune" type="Area2D" groups=["Rune"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pf171")
@@ -14,4 +14,4 @@ shape = SubResource("RectangleShape2D_pf171")
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_oaq8g")
 autoplay = "default"
-frame_progress = 0.688985
+frame_progress = 0.969253
