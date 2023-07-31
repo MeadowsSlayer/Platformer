@@ -1,10 +1,13 @@
+NinePatchRect
+TextureRect
+HBoxContainer
+Control
+CanvasLayer
 CollisionShape2D
 Area2D
 Label
-Control
 TileMap
 AnimatedSprite2D
-CanvasLayer
 ParallaxBackground
 ParallaxLayer
 Timer

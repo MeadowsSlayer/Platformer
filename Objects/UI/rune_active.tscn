@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5r36kbw84750"]
+
+[ext_resource type="Texture2D" uid="uid://bgndst3e1jflg" path="res://Sprites/Heart&ManaUi.png" id="1_74u13"]
+
+[node name="RuneActive" type="NinePatchRect"]
+custom_minimum_size = Vector2(32, 32)
+texture = ExtResource("1_74u13")
+region_rect = Rect2(21, 38, 10, 10)

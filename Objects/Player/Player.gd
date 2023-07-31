@@ -14,11 +14,15 @@ var jumping = false
 var jump_buff = false
 var coyote_time = true
 
+var rune_active = load("res://Objects/UI/rune_active.tscn")
+
 @onready var sprite = $Sprite
 @onready var coyote_timer = $CoyoteTimer
 @onready var mid_air_timer = $MidAirTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
 @onready var tile_map = $"../TileMap"
+@onready var runes_ui = $"../CanvasLayer/Control/Runes"
+
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -85,12 +89,25 @@ func Jump():
 	velocity.y = JUMP_VELOCITY
 
 func _input(event):
-	if event.is_action_pressed("Blue"):
+	if event.is_action_pressed("Blue") and runes > 0:
 		tile_map.set_layer_enabled(2, true)
 		tile_map.set_layer_enabled(3, false)
-	if event.is_action_pressed("Red"):
+		RunesChanged(-1)
+	if event.is_action_pressed("Red") and runes > 0:
 		tile_map.set_layer_enabled(2, false)
 		tile_map.set_layer_enabled(3, true)
+		RunesChanged(-1)
+
+func RunesChanged(num):
+	runes += num
+	if num > 0:
+		var new_rune = rune_active.instantiate()
+		runes_ui.add_child(new_rune)
+	else:
+		runes_ui.get_child(0).queue_free()
+	
+	if runes == 0:
+		tile_map.set_layer_enabled(5, false)
 
 func _on_coyote_timer_timeout():
 	coyote_time = false
@@ -105,6 +122,6 @@ func _on_mid_air_timer_timeout():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Rune"):
-		runes += 1
+		RunesChanged(1)
 		area.queue_free()
 		tile_map.set_layer_enabled(5, true)
