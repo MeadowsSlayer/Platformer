@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+@export var limit_top = 0
+@export var limit_bottom = 0
+@export var limit_right = 0
+@export var limit_left = 0
+
 const JUMP_VELOCITY = -500.0
 const ACCELERATION = 20
 const MAX_SPEED = 250.0
@@ -8,6 +13,8 @@ var speed = 0.0
 var jumps = 1
 var gravity = 0
 var runes = 0
+var coins = 0
+var current_color = "none"
 var mid_air = false
 var falling = false
 var jumping = false
@@ -21,8 +28,15 @@ var rune_active = load("res://Objects/UI/rune_active.tscn")
 @onready var mid_air_timer = $MidAirTimer
 @onready var jump_buffer_timer = $JumpBufferTimer
 @onready var tile_map = $"../TileMap"
-@onready var runes_ui = $"../CanvasLayer/Control/Runes"
+@onready var runes_ui = $"../CanvasLayer/UI/Runes"
+@onready var camera_2d = $Camera2D
+@onready var coin_num = $"../CanvasLayer/UI/CoinNum"
 
+func _ready():
+	camera_2d.limit_bottom = limit_bottom
+	camera_2d.limit_left = limit_left
+	camera_2d.limit_top = limit_top
+	camera_2d.limit_right = limit_right
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -89,13 +103,15 @@ func Jump():
 	velocity.y = JUMP_VELOCITY
 
 func _input(event):
-	if event.is_action_pressed("Blue") and runes > 0:
+	if event.is_action_pressed("Blue") and runes > 0 and current_color != "blue":
 		tile_map.set_layer_enabled(2, true)
 		tile_map.set_layer_enabled(3, false)
+		current_color = "blue"
 		RunesChanged(-1)
-	if event.is_action_pressed("Red") and runes > 0:
+	if event.is_action_pressed("Red") and runes > 0 and current_color != "red":
 		tile_map.set_layer_enabled(2, false)
 		tile_map.set_layer_enabled(3, true)
+		current_color = "red"
 		RunesChanged(-1)
 
 func RunesChanged(num):
@@ -125,3 +141,7 @@ func _on_area_2d_area_entered(area):
 		RunesChanged(1)
 		area.queue_free()
 		tile_map.set_layer_enabled(5, true)
+	if area.is_in_group("Coin"):
+		coins += 1
+		area.queue_free()
+		coin_num.text = str(coins)

@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l2hvj"]
 size = Vector2(16, 16)
 
-[node name="Coin" type="Area2D"]
+[node name="Coin" type="Area2D" groups=["Coin"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_l2hvj")
@@ -13,4 +13,5 @@ shape = SubResource("RectangleShape2D_l2hvj")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_r316p")
-frame_progress = 0.151954
+autoplay = "default"
+frame_progress = 0.76016
