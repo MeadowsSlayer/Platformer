@@ -22,6 +22,7 @@ var jump_buff = false
 var coyote_time = true
 
 var rune_active = load("res://Objects/UI/rune_active.tscn")
+var rune_unactive = load("res://Objects/UI/rune_unactive.tscn")
 
 @onready var sprite = $Sprite
 @onready var coyote_timer = $CoyoteTimer
@@ -119,8 +120,11 @@ func RunesChanged(num):
 	if num > 0:
 		var new_rune = rune_active.instantiate()
 		runes_ui.add_child(new_rune)
+		runes_ui.move_child(runes_ui.get_child(runes_ui.get_child_count()-1), 0)
 	else:
-		runes_ui.get_child(0).queue_free()
+		var new_rune = rune_unactive.instantiate()
+		runes_ui.add_child(new_rune)
+		runes_ui.get_child(runes).queue_free()
 	
 	if runes == 0:
 		tile_map.set_layer_enabled(5, false)

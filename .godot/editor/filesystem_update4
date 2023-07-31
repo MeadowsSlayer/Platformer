@@ -9,3 +9,4 @@ res://Objects/Pickable Items/Coin.tscn
 res://Objects/Pickable Items/Rune.tscn
 res://Objects/Player/Player.gd
 res://Objects/UI/rune_active.tscn
+res://Objects/UI/rune_unactive.tscn
