@@ -551,6 +551,11 @@ texture_region_size = Vector2i(8, 8)
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cc2ku"]
 texture = ExtResource("2_eudpa")
 texture_region_size = Vector2i(37, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_1/angular_velocity = 0.0
 
 [resource]
 tile_size = Vector2i(8, 8)

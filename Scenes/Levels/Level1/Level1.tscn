@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dtwr16g1i2rtd"]
+[gd_scene load_steps=10 format=3 uid="uid://dtwr16g1i2rtd"]
 
 [ext_resource type="Texture2D" uid="uid://dx10oqunht36r" path="res://Sprites/Windrise Background/windrise-background.png" id="1_bgifr"]
 [ext_resource type="TileSet" uid="uid://dqeefry5jjtj6" path="res://Resources/KindaCuteForestTileset.tres" id="2_3nbp2"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://gjtu5hx1nm8q" path="res://Objects/Pickable Items/Rune.tscn" id="4_oh64o"]
 [ext_resource type="LabelSettings" uid="uid://c0iblpbbtl3cw" path="res://Resources/LabelSettings/WorldText.tres" id="5_c1dfw"]
 [ext_resource type="PackedScene" uid="uid://daen2ac4h3pd3" path="res://Objects/Pickable Items/Coin.tscn" id="5_ku2rh"]
+[ext_resource type="PackedScene" uid="uid://dhap2rrwhgacw" path="res://Objects/Flag.tscn" id="6_vnc5v"]
 [ext_resource type="Texture2D" uid="uid://bi1wk1kbiio5w" path="res://Sprites/SwampTileset/4 Animated objects/Coin.png" id="8_1ya6y"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_laicr"]
@@ -129,6 +130,9 @@ position = Vector2(2032, 168)
 [node name="Coin13" parent="Coins" instance=ExtResource("5_ku2rh")]
 position = Vector2(2064, 168)
 
+[node name="Flag" parent="." instance=ExtResource("6_vnc5v")]
+position = Vector2(2632, 40)
+
 [node name="Text" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -196,7 +200,7 @@ offset_left = 1392.0
 offset_top = 496.0
 offset_right = 1584.0
 offset_bottom = 624.0
-text = "press left mouse button to use rune to make blue platforms real"
+text = "press left mouse button to use rune to make blue platforms solid"
 label_settings = ExtResource("5_c1dfw")
 autowrap_mode = 3
 clip_text = true
@@ -208,7 +212,7 @@ offset_left = 1432.0
 offset_top = 232.0
 offset_right = 1832.0
 offset_bottom = 336.0
-text = "press right mouse button to use rune to make red platforms real
+text = "press right mouse button to use rune to make red platforms solid
 only one color can exist at a time"
 label_settings = ExtResource("5_c1dfw")
 horizontal_alignment = 1
@@ -225,6 +229,18 @@ offset_bottom = 280.0
 text = "if you'll touch spikes you'll restart the whole level"
 label_settings = ExtResource("5_c1dfw")
 horizontal_alignment = 1
+autowrap_mode = 3
+clip_text = true
+uppercase = true
+
+[node name="Flag" type="Label" parent="Text"]
+layout_mode = 0
+offset_left = 2376.0
+offset_top = 144.0
+offset_right = 2584.0
+offset_bottom = 203.0
+text = "touch the flag to finish level"
+label_settings = ExtResource("5_c1dfw")
 autowrap_mode = 3
 clip_text = true
 uppercase = true

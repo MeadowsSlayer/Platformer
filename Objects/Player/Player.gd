@@ -20,6 +20,7 @@ var falling = false
 var jumping = false
 var jump_buff = false
 var coyote_time = true
+var level_finished = false
 
 var rune_active = load("res://Objects/UI/rune_active.tscn")
 var rune_unactive = load("res://Objects/UI/rune_unactive.tscn")
@@ -65,7 +66,7 @@ func _physics_process(delta):
 		if jump_buff == true:
 			Jump()
 
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and level_finished == false:
 		if (is_on_floor() or coyote_time == true) and jumps > 0:
 			Jump()
 		if not is_on_floor():
@@ -81,6 +82,10 @@ func _physics_process(delta):
 		mid_air_timer.start()
 
 	var direction = Input.get_axis("left", "right")
+	
+	if level_finished:
+		direction = 0
+	
 	if direction:
 		speed = move_toward(speed, MAX_SPEED, ACCELERATION)
 		velocity.x = direction * speed
@@ -104,12 +109,12 @@ func Jump():
 	velocity.y = JUMP_VELOCITY
 
 func _input(event):
-	if event.is_action_pressed("Blue") and runes > 0 and current_color != "blue":
+	if event.is_action_pressed("Blue") and runes > 0 and current_color != "blue" and level_finished == false:
 		tile_map.set_layer_enabled(2, true)
 		tile_map.set_layer_enabled(3, false)
 		current_color = "blue"
 		RunesChanged(-1)
-	if event.is_action_pressed("Red") and runes > 0 and current_color != "red":
+	if event.is_action_pressed("Red") and runes > 0 and current_color != "red" and level_finished == false:
 		tile_map.set_layer_enabled(2, false)
 		tile_map.set_layer_enabled(3, true)
 		current_color = "red"
@@ -149,3 +154,5 @@ func _on_area_2d_area_entered(area):
 		coins += 1
 		area.queue_free()
 		coin_num.text = str(coins)
+	if area.is_in_group("Flag"):
+		level_finished = true
