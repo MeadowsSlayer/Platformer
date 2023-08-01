@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=3 uid="uid://u4ama5b8lylc"]
+
+[ext_resource type="LabelSettings" uid="uid://ci66l5ahhxo0c" path="res://Resources/LabelSettings/UITextBig.tres" id="1_6u5ok"]
+[ext_resource type="LabelSettings" uid="uid://cix0f1xgo2cyw" path="res://Resources/LabelSettings/UITextMid.tres" id="2_tkq7n"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.243137, 0.219608, 0.619608, 0.309804)
+
+[node name="Pause" type="Label" parent="."]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 1152.0
+offset_bottom = 205.0
+text = "Pause"
+label_settings = ExtResource("1_6u5ok")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 240.0
+offset_right = 704.0
+offset_bottom = 552.0
+theme_override_constants/separation = 8
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 56)
+layout_mode = 2
+text = "Continue"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 56)
+layout_mode = 2
+text = "Settings"
+
+[node name="Restart" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 56)
+layout_mode = 2
+text = "Restart"
+
+[node name="ToLevelMenu" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 56)
+layout_mode = 2
+text = "Level Menu"
+
+[node name="ToMainMenu" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(256, 56)
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Tips" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 416.0
+offset_right = 440.0
+offset_bottom = 640.0
+text = "Controls List:
+AD - Left/Right Movement
+Space - Jump
+ESC - Pause/Unpause
+R - Restart
+Right Mouse Click - Red Platforms
+Left Mouse Click - Blue Platforms"
+label_settings = ExtResource("2_tkq7n")

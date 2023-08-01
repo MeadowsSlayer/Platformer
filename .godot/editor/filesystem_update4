@@ -15,3 +15,7 @@ res://Resources/ButtonStyles/ButtonPressed.tres
 res://Objects/Player/Player.tscn
 res://Scenes/MainMenu/MainMenu.gd
 res://Objects/UI/LevelFinished/LevelFinished.gd
+res://Objects/UI/PauseMenu/PauseMenu.tscn
+res://Objects/Player/Player.gd
+res://Resources/SpriteFrames/Spikes.tres
+res://Objects/Dangers/Spike.tscn

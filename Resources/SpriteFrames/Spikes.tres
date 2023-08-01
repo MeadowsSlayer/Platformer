@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://br5vor61vvsn3"]
+
+[ext_resource type="Texture2D" uid="uid://bwe6n0o6ds5yk" path="res://Sprites/kinda_cute_forest/tileset.png" id="1_50bsp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_inev8"]
+atlas = ExtResource("1_50bsp")
+region = Rect2(104, 32, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eibdx"]
+atlas = ExtResource("1_50bsp")
+region = Rect2(96, 32, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whlbp"]
+atlas = ExtResource("1_50bsp")
+region = Rect2(104, 24, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nu05"]
+atlas = ExtResource("1_50bsp")
+region = Rect2(96, 24, 8, 8)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_inev8")
+}],
+"loop": false,
+"name": &"Bottom",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eibdx")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whlbp")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nu05")
+}],
+"loop": false,
+"name": &"Top",
+"speed": 5.0
+}]

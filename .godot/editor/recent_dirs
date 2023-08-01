@@ -1,3 +1,7 @@
+res://Objects/Dangers
+res://Sprites/kinda_cute_forest
+res://Resources/SpriteFrames
+res://Objects/UI/PauseMenu
 res://Resources/LabelSettings
 res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet
 res://Resources
@@ -7,7 +11,6 @@ res://DataFiles/LevelFiles
 res://Objects/UI
 res://Objects
 res://Sprites/SwampTileset/4 Animated objects
-res://Resources/SpriteFrames
 res://Objects/Pickable Items
 res://Sprites
 res://Objects/Player

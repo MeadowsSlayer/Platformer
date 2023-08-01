@@ -160,3 +160,5 @@ func _on_area_2d_area_entered(area):
 	if area.is_in_group("Flag"):
 		level_finished = true
 		level_finished_ui.FinishLevel(coins)
+	if area.is_in_group("Spike"):
+		get_tree().reload_current_scene()
