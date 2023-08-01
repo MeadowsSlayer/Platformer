@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtwr16g1i2rtd"]
+[gd_scene load_steps=11 format=3 uid="uid://dtwr16g1i2rtd"]
 
 [ext_resource type="Texture2D" uid="uid://dx10oqunht36r" path="res://Sprites/Windrise Background/windrise-background.png" id="1_bgifr"]
 [ext_resource type="TileSet" uid="uid://dqeefry5jjtj6" path="res://Resources/KindaCuteForestTileset.tres" id="2_3nbp2"]
@@ -8,9 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://daen2ac4h3pd3" path="res://Objects/Pickable Items/Coin.tscn" id="5_ku2rh"]
 [ext_resource type="PackedScene" uid="uid://dhap2rrwhgacw" path="res://Objects/Flag.tscn" id="6_vnc5v"]
 [ext_resource type="Texture2D" uid="uid://bi1wk1kbiio5w" path="res://Sprites/SwampTileset/4 Animated objects/Coin.png" id="8_1ya6y"]
+[ext_resource type="PackedScene" uid="uid://dcnk1vbajmd4e" path="res://Objects/UI/LevelFinished/LevelFinished.tscn" id="9_r116t"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_laicr"]
-font_size = 64
+font_size = 32
+font_color = Color(0.992157, 0.862745, 0.690196, 1)
+outline_size = 8
+outline_color = Color(0.25098, 0.105882, 0, 1)
 
 [node name="Level" type="Node2D"]
 
@@ -74,7 +78,6 @@ layer_5/tile_data = PackedInt32Array(1310794, 655360, 65538, 1310795, 655360, 65
 
 [node name="Player" parent="." instance=ExtResource("3_llbum")]
 position = Vector2(-360, 752)
-collision_mask = 3
 limit_top = -352
 limit_bottom = 848
 limit_right = 2688
@@ -272,9 +275,13 @@ region_rect = Rect2(0, 2, 8, 8)
 [node name="CoinNum" type="Label" parent="CanvasLayer/UI"]
 layout_mode = 0
 offset_left = 1024.0
-offset_top = 21.0
+offset_top = 11.0
 offset_right = 1104.0
-offset_bottom = 72.0
+offset_bottom = 62.0
 text = "0"
 label_settings = SubResource("LabelSettings_laicr")
 horizontal_alignment = 2
+
+[node name="LevelFinished" parent="CanvasLayer" instance=ExtResource("9_r116t")]
+visible = false
+level_num = 1

@@ -1,32 +1,52 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690809028
+::res://::1690904732
 icon.svg::CompressedTexture2D::9164202520055673838::1690711847::1690711856::1::::<><>::
 README.md::TextFile::-1::1690712158::0::1::::<><>::
-::res://Objects/::1690808030
-::res://Objects/Pickable Items/::1690816003
-Coin.tscn::PackedScene::7168357103854646958::1690816003::0::1::::<><>::uid://b2yphv7t2uhhp::::res://Resources/SpriteFrames/Coin.tres
-Rune.tscn::PackedScene::440903387949813706::1690816003::0::1::::<><>::uid://3md2q08jh76::::res://Resources/SpriteFrames/Rune.tres
-::res://Objects/Player/::1690816003
-Player.gd::GDScript::-1::1690815510::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6877438016869502249::1690816003::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
-::res://Objects/UI/::1690816003
-rune_unactive.tscn::PackedScene::6494767210482007380::1690816117::0::1::::<><>::uid://bgndst3e1jflg::::res://Sprites/Heart&ManaUi.png
-rune_active.tscn::PackedScene::6915357061577864717::1690816003::0::1::::<><>::uid://bgndst3e1jflg::::res://Sprites/Heart&ManaUi.png
-::res://Resources/::1690815222
+::res://DataFiles/::1690896913
+::res://DataFiles/LevelFiles/::1690902866
+Level1.tres::Resource/Resource::-1::1690903507::0::1::::<><>::res://GeneralScripts/LevelsData.gd
+::res://GeneralScripts/::1690898504
+GameData.gd::GDScript::-1::1690895933::0::1::::GameData<>Resource<>::
+LevelsData.gd::GDScript::-1::1690898504::0::1::::LevelsData<>Resource<>::
+::res://Objects/::1690893896
+Flag.tscn::PackedScene::7651543848040256122::1690817678::0::1::::<><>::uid://bht7a0iarn5pl
+::res://Objects/Pickable Items/::1690817678
+Coin.tscn::PackedScene::7168357103854646958::1690817678::0::1::::<><>::uid://b2yphv7t2uhhp
+Rune.tscn::PackedScene::440903387949813706::1690817678::0::1::::<><>::uid://3md2q08jh76
+::res://Objects/Player/::1690904725
+Player.gd::GDScript::-1::1690895409::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6877438016869502249::1690904725::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
+::res://Objects/UI/::1690893898
+rune_active.tscn::PackedScene::6915357061577864717::1690817678::0::1::::<><>::uid://bgndst3e1jflg
+rune_unactive.tscn::PackedScene::6494767210482007380::1690817678::0::1::::<><>::uid://bgndst3e1jflg
+::res://Objects/UI/LevelFinished/::1690904725
+LevelFinished.gd::GDScript::-1::1690898587::0::1::::<>Control<>::
+LevelFinished.tscn::PackedScene::7327131354274997530::1690904725::0::1::::<><>::res://Objects/UI/LevelFinished/LevelFinished.gd<>uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>uid://cix0f1xgo2cyw::::res://Resources/LabelSettings/UITextMid.tres
+::res://Resources/::1690904725
+DefaultTheme.tres::Theme::4666278017305317150::1690904725::0::1::::<><>::uid://dfyq21r54c8tn::::res://Resources/ButtonStyles/ButtonDisabled.tres<>uid://wlkw2tba4ejm::::res://Resources/ButtonStyles/ButtonHover.tres<>uid://docngvoj8g75m::::res://Resources/ButtonStyles/ButtonNormal.tres<>uid://cro4ur8d7y4lb::::res://Resources/ButtonStyles/ButtonPressed.tres
 DefaultTileset.tres::TileSet::1210620544307270007::1690740938::0::1::::<><>::uid://0k7iri8lo0qo
-KindaCuteForestTileset.tres::TileSet::8290793788592374965::1690815222::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
-::res://Resources/LabelSettings/::1690748106
-WorldText.tres::LabelSettings::6544158630561557426::1690748106::0::1::::<><>::
-::res://Resources/SpriteFrames/::1690814179
-Coin.tres::SpriteFrames::4331988936790484169::1690814179::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
-PlayerSF.tres::SpriteFrames::2389814189941308212::1690798720::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
-Rune.tres::SpriteFrames::58537982436258163::1690798720::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
+Hardpixel-nn51.otf::FontFile::1180842688909966634::1591843566::1690904698::1::::<><>::
+KindaCuteForestTileset.tres::TileSet::8290793788592374965::1690904070::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
+::res://Resources/ButtonStyles/::1690904482
+ButtonDisabled.tres::StyleBoxTexture::7560772416957308023::1690903455::0::1::::<><>::uid://c0evnoblusik4
+ButtonHover.tres::StyleBoxTexture::1567510620253260310::1690903447::0::1::::<><>::uid://c0evnoblusik4
+ButtonNormal.tres::StyleBoxTexture::8146835778260176104::1690904482::0::1::::<><>::uid://c0evnoblusik4::::res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet/gui_paper_animated_button1.png
+ButtonPressed.tres::StyleBoxTexture::5996750450513459275::1690903373::0::1::::<><>::uid://c0evnoblusik4
+::res://Resources/LabelSettings/::1690904115
+UITextBig.tres::LabelSettings::5400251273403856148::1690904070::0::1::::<><>::uid://cjjhqrviqyxsl::::res://Sprites/GUI_Essential_Free_v1.1/Font/TTF/Toriko.ttf
+UITextMid.tres::LabelSettings::5383361060052513030::1690904070::0::1::::<><>::
+WorldText.tres::LabelSettings::6544158630561557426::1690904115::0::1::::<><>::
+::res://Resources/SpriteFrames/::1690904070
+Coin.tres::SpriteFrames::4331988936790484169::1690904070::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
+Flag.tres::SpriteFrames::2918910035720443129::1690904070::0::1::::<><>::uid://drpg53hgt15h8::::res://Sprites/SwampTileset/4 Animated objects/Flag.png
+PlayerSF.tres::SpriteFrames::2389814189941308212::1690904070::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
+Rune.tres::SpriteFrames::58537982436258163::1690904070::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
 ::res://Scenes/::1690712469
 ::res://Scenes/Levels/::1690712481
-::res://Scenes/Levels/Level1/::1690816003
-Level1.tscn::PackedScene::8539346648995564901::1690816003::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn<>uid://c0iblpbbtl3cw::::res://Resources/LabelSettings/WorldText.tres<>uid://daen2ac4h3pd3::::res://Objects/Pickable Items/Coin.tscn<>uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
-::res://Scenes/MainMenu/::1690816003
-MainMenu.tscn::PackedScene::1114247250053051678::1690816003::0::1::::<><>::
+::res://Scenes/Levels/Level1/::1690904725
+Level1.tscn::PackedScene::8539346648995564901::1690904725::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn<>uid://c0iblpbbtl3cw::::res://Resources/LabelSettings/WorldText.tres<>uid://daen2ac4h3pd3::::res://Objects/Pickable Items/Coin.tscn<>uid://dhap2rrwhgacw::::res://Objects/Flag.tscn<>uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png<>uid://dcnk1vbajmd4e::::res://Objects/UI/LevelFinished/LevelFinished.tscn
+::res://Scenes/MainMenu/::1690904725
+MainMenu.tscn::PackedScene::1114247250053051678::1690904725::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>uid://q3akonfjeelu::::res://Resources/Hardpixel-nn51.otf
 ::res://Sprites/::1690740355
 AnimationSheet_Character.png::CompressedTexture2D::3339387889943430242::1690717039::1690717272::1::::<><>::
 Heart&ManaUi.png::CompressedTexture2D::2834605993007682680::1690717067::1690717272::1::::<><>::
@@ -59,8 +79,8 @@ gui_paper_animated_selection1.png::CompressedTexture2D::5735334446181785058::164
 gui_paper_animated_selection2.png::CompressedTexture2D::6796778244745932705::1648633316::1690717272::1::::<><>::
 ::res://Sprites/GUI_Essential_Free_v1.1/Font/::1690717267
 ::res://Sprites/GUI_Essential_Free_v1.1/Font/Aseprite/::1690717267
-::res://Sprites/GUI_Essential_Free_v1.1/Font/TTF/::1690717271
-Toriko.ttf::FontFile::5423574877290555595::1648816862::1690717271::1::::<><>::
+::res://Sprites/GUI_Essential_Free_v1.1/Font/TTF/::1690904004
+Toriko.ttf::FontFile::5423574877290555595::1648816862::1690904004::1::::<><>::
 ::res://Sprites/kinda_cute_forest/::1690740357
 background.png::CompressedTexture2D::8932066660674801285::1581948622::1690740357::1::::<><>::
 readme.txt::TextFile::-1::1581949160::0::1::::<><>::

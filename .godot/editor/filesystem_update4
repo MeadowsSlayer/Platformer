@@ -1,14 +1,17 @@
-res://Scenes/Levels/Level1/Level1.tscn
+res://Scenes/MainMenu/MainMenu.tscn
+res://Resources/LabelSettings/UITextBig.tres
 res://Resources/KindaCuteForestTileset.tres
 res://Resources/SpriteFrames/PlayerSF.tres
 res://Resources/SpriteFrames/Rune.tres
+res://Resources/LabelSettings/WorldText.tres
 res://Resources/SpriteFrames/Coin.tres
-res://Scenes/MainMenu/MainMenu.tscn
-res://Objects/Player/Player.tscn
-res://Objects/Pickable Items/Coin.tscn
-res://Objects/Pickable Items/Rune.tscn
-res://Objects/Player/Player.gd
-res://Objects/UI/rune_active.tscn
-res://Objects/UI/rune_unactive.tscn
 res://Resources/SpriteFrames/Flag.tres
-res://Objects/Flag.tscn
+res://Resources/LabelSettings/UITextMid.tres
+res://Scenes/Levels/Level1/Level1.tscn
+res://Objects/UI/LevelFinished/LevelFinished.tscn
+res://Resources/DefaultTheme.tres
+res://Resources/ButtonStyles/ButtonNormal.tres
+res://Resources/ButtonStyles/ButtonPressed.tres
+res://Objects/Player/Player.tscn
+res://Scenes/MainMenu/MainMenu.gd
+res://Objects/UI/LevelFinished/LevelFinished.gd

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelsData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://GeneralScripts/LevelsData.gd" id="1_lp0ao"]
+
+[resource]
+script = ExtResource("1_lp0ao")
+level_num = 1
+level_cleared = true
+max_coins_collected = 13
+max_coins_on_a_level = 13
+min_time_min_all_coins = 0
+min_time_sec_all_coins = 31
+min_time_min_not_all_coins = 0
+min_time_sec_not_all_coins = 17
+coins_min_time_not_all_coins = 6

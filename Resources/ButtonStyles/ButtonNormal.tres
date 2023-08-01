@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://docngvoj8g75m"]
+
+[ext_resource type="Texture2D" uid="uid://c0evnoblusik4" path="res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet/gui_paper_animated_button1.png" id="1_q260a"]
+
+[resource]
+texture = ExtResource("1_q260a")
+region_rect = Rect2(20, 99, 56, 27)

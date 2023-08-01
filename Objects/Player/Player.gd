@@ -33,6 +33,7 @@ var rune_unactive = load("res://Objects/UI/rune_unactive.tscn")
 @onready var runes_ui = $"../CanvasLayer/UI/Runes"
 @onready var camera_2d = $Camera2D
 @onready var coin_num = $"../CanvasLayer/UI/CoinNum"
+@onready var level_finished_ui = $"../CanvasLayer/LevelFinished"
 
 func _ready():
 	camera_2d.limit_bottom = limit_bottom
@@ -119,6 +120,8 @@ func _input(event):
 		tile_map.set_layer_enabled(3, true)
 		current_color = "red"
 		RunesChanged(-1)
+	if event.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
 
 func RunesChanged(num):
 	runes += num
@@ -156,3 +159,4 @@ func _on_area_2d_area_entered(area):
 		coin_num.text = str(coins)
 	if area.is_in_group("Flag"):
 		level_finished = true
+		level_finished_ui.FinishLevel(coins)

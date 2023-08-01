@@ -1,4 +1,71 @@
-[gd_scene format=3 uid="uid://p40qv07vsvuc"]
+[gd_scene load_steps=8 format=3 uid="uid://p40qv07vsvuc"]
+
+[ext_resource type="Texture2D" uid="uid://dx10oqunht36r" path="res://Sprites/Windrise Background/windrise-background.png" id="1_1c73m"]
+[ext_resource type="Script" path="res://Scenes/MainMenu/MainMenu.gd" id="1_y4rva"]
+[ext_resource type="LabelSettings" uid="uid://ci66l5ahhxo0c" path="res://Resources/LabelSettings/UITextBig.tres" id="2_5l7qe"]
+[ext_resource type="Texture2D" uid="uid://to5adqq15c67" path="res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet/gui_paper_animated_button2.png" id="2_jupih"]
+
+[sub_resource type="Animation" id="Animation_5qmya"]
+resource_name = "new_animation"
+length = 30.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-360, 0), Vector2(1408, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 30),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2128, 0), Vector2(-360, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yyt33"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Background1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-360, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Background2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2128, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ru3gu"]
+_data = {
+"RESET": SubResource("Animation_yyt33"),
+"new_animation": SubResource("Animation_5qmya")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +74,128 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_y4rva")
+
+[node name="Background1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -360.0
+offset_right = 1411.0
+offset_bottom = 664.0
+texture = ExtResource("1_1c73m")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Background2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2128.0
+offset_right = -357.0
+offset_bottom = 664.0
+texture = ExtResource("1_1c73m")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.258824, 0.407843, 0.792157, 0.403922)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="MainMenu" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -448.0
+offset_top = 24.0
+offset_right = -269.0
+offset_bottom = 58.0
+grow_horizontal = 2
+scale = Vector2(5, 5)
+texture = ExtResource("2_jupih")
+region_rect = Rect2(116, 133, 56, 23)
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 7
+
+[node name="Title" type="Label" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -300.0
+offset_bottom = -156.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Platformer"
+label_settings = ExtResource("2_5l7qe")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.319
+anchor_top = 0.321
+anchor_right = 0.583
+anchor_bottom = 0.914
+offset_left = 80.512
+offset_top = 23.992
+offset_right = 32.384
+offset_bottom = -48.272
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="StartGame" type="Button" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(156, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+
+[node name="LevelMenu" type="Button" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(156, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Levels"
+
+[node name="Settings" type="Button" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(156, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="Credit" type="Button" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(156, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Credits"
+
+[node name="Exit" type="Button" parent="MainMenu/VBoxContainer"]
+custom_minimum_size = Vector2(156, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit Game"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "new_animation"
+libraries = {
+"": SubResource("AnimationLibrary_ru3gu")
+}
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/LevelMenu" to="." method="_on_level_menu_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Credit" to="." method="_on_credit_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

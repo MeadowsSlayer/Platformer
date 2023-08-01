@@ -1,0 +1,117 @@
+[gd_scene load_steps=5 format=3 uid="uid://dcnk1vbajmd4e"]
+
+[ext_resource type="Script" path="res://Objects/UI/LevelFinished/LevelFinished.gd" id="1_8bby3"]
+[ext_resource type="LabelSettings" uid="uid://ci66l5ahhxo0c" path="res://Resources/LabelSettings/UITextBig.tres" id="3_buj30"]
+[ext_resource type="LabelSettings" uid="uid://cix0f1xgo2cyw" path="res://Resources/LabelSettings/UITextMid.tres" id="4_nqx75"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_orchy"]
+font_size = 156
+font_color = Color(0.992188, 0.875, 0.714844, 1)
+outline_size = 16
+outline_color = Color(0.25, 0.105469, 0, 1)
+
+[node name="LevelFinished" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8bby3")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.243137, 0.219608, 0.619608, 0.309804)
+
+[node name="NextLevel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 528.0
+offset_right = 896.0
+offset_bottom = 578.081
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "Next Level"
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 528.0
+offset_right = 672.0
+offset_bottom = 578.081
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "Restart
+"
+
+[node name="MainMenu" type="Button" parent="."]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 528.0
+offset_right = 448.0
+offset_bottom = 578.081
+focus_mode = 0
+theme_override_font_sizes/font_size = 32
+text = "Main Menu"
+
+[node name="LevelCleared" type="Label" parent="."]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 1152.0
+offset_bottom = 205.0
+text = "Level Cleared!"
+label_settings = ExtResource("3_buj30")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Coins" type="Label" parent="."]
+layout_mode = 0
+offset_top = 192.0
+offset_right = 1152.0
+offset_bottom = 248.0
+text = "X coins collected out of Y"
+label_settings = ExtResource("4_nqx75")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Time" type="Label" parent="."]
+layout_mode = 0
+offset_top = 232.0
+offset_right = 1152.0
+offset_bottom = 423.0
+text = "16:00"
+label_settings = SubResource("LabelSettings_orchy")
+horizontal_alignment = 1
+
+[node name="ClearingTime" type="Label" parent="."]
+layout_mode = 0
+offset_top = 424.0
+offset_right = 1152.0
+offset_bottom = 464.0
+text = "time spent"
+label_settings = ExtResource("4_nqx75")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="New Record" type="Label" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 240.0
+offset_right = 896.0
+offset_bottom = 279.0
+text = "new record!"
+label_settings = ExtResource("4_nqx75")
+horizontal_alignment = 1
+uppercase = true
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_main_menu_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
