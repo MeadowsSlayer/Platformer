@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://u4ama5b8lylc"]
+[gd_scene load_steps=4 format=3 uid="uid://u4ama5b8lylc"]
 
 [ext_resource type="LabelSettings" uid="uid://ci66l5ahhxo0c" path="res://Resources/LabelSettings/UITextBig.tres" id="1_6u5ok"]
+[ext_resource type="Script" path="res://Objects/UI/PauseMenu/PauseMenu.gd" id="1_imxjg"]
 [ext_resource type="LabelSettings" uid="uid://cix0f1xgo2cyw" path="res://Resources/LabelSettings/UITextMid.tres" id="2_tkq7n"]
 
 [node name="PauseMenu" type="Control"]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_imxjg")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -71,8 +73,14 @@ offset_bottom = 640.0
 text = "Controls List:
 AD - Left/Right Movement
 Space - Jump
-ESC - Pause/Unpause
+ESC - Pause
 R - Restart
 Right Mouse Click - Red Platforms
 Left Mouse Click - Blue Platforms"
 label_settings = ExtResource("2_tkq7n")
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="VBoxContainer/ToLevelMenu" to="." method="_on_to_level_menu_pressed"]
+[connection signal="pressed" from="VBoxContainer/ToMainMenu" to="." method="_on_to_main_menu_pressed"]

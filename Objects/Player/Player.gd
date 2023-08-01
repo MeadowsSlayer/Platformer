@@ -34,6 +34,7 @@ var rune_unactive = load("res://Objects/UI/rune_unactive.tscn")
 @onready var camera_2d = $Camera2D
 @onready var coin_num = $"../CanvasLayer/UI/CoinNum"
 @onready var level_finished_ui = $"../CanvasLayer/LevelFinished"
+@onready var pause_menu = $"../CanvasLayer/PauseMenu"
 
 func _ready():
 	camera_2d.limit_bottom = limit_bottom
@@ -122,6 +123,8 @@ func _input(event):
 		RunesChanged(-1)
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
+	if event.is_action_pressed("pause"):
+		pause_menu.Pause()
 
 func RunesChanged(num):
 	runes += num

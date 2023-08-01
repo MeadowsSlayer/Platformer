@@ -19,3 +19,4 @@ res://Objects/UI/PauseMenu/PauseMenu.tscn
 res://Objects/Player/Player.gd
 res://Resources/SpriteFrames/Spikes.tres
 res://Objects/Dangers/Spike.tscn
+res://Objects/UI/PauseMenu/PauseMenu.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtwr16g1i2rtd"]
+[gd_scene load_steps=13 format=3 uid="uid://dtwr16g1i2rtd"]
 
 [ext_resource type="Texture2D" uid="uid://dx10oqunht36r" path="res://Sprites/Windrise Background/windrise-background.png" id="1_bgifr"]
 [ext_resource type="TileSet" uid="uid://dqeefry5jjtj6" path="res://Resources/KindaCuteForestTileset.tres" id="2_3nbp2"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bi1wk1kbiio5w" path="res://Sprites/SwampTileset/4 Animated objects/Coin.png" id="8_1ya6y"]
 [ext_resource type="PackedScene" uid="uid://dcnk1vbajmd4e" path="res://Objects/UI/LevelFinished/LevelFinished.tscn" id="9_r116t"]
 [ext_resource type="PackedScene" uid="uid://berhab85w5yus" path="res://Objects/Dangers/Spike.tscn" id="10_p4o46"]
+[ext_resource type="PackedScene" uid="uid://u4ama5b8lylc" path="res://Objects/UI/PauseMenu/PauseMenu.tscn" id="11_028jh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_laicr"]
 font_size = 32
@@ -415,6 +416,7 @@ clip_text = true
 uppercase = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="UI" type="Control" parent="CanvasLayer"]
 layout_mode = 3
@@ -451,3 +453,6 @@ horizontal_alignment = 2
 [node name="LevelFinished" parent="CanvasLayer" instance=ExtResource("9_r116t")]
 visible = false
 level_num = 1
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("11_028jh")]
+visible = false
