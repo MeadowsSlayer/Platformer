@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=3 uid="uid://vpta34hhy16l"]
+
+[ext_resource type="PackedScene" uid="uid://c48qntvlfi1ar" path="res://Objects/Player/Player.tscn" id="1_5w1s3"]
+[ext_resource type="TileSet" uid="uid://dqeefry5jjtj6" path="res://Resources/KindaCuteForestTileset.tres" id="2_kg031"]
+[ext_resource type="Texture2D" uid="uid://dx10oqunht36r" path="res://Sprites/Windrise Background/windrise-background.png" id="3_r0jli"]
+[ext_resource type="Texture2D" uid="uid://bi1wk1kbiio5w" path="res://Sprites/SwampTileset/4 Animated objects/Coin.png" id="4_88gei"]
+[ext_resource type="PackedScene" uid="uid://dcnk1vbajmd4e" path="res://Objects/UI/LevelFinished/LevelFinished.tscn" id="5_0e18q"]
+[ext_resource type="PackedScene" uid="uid://u4ama5b8lylc" path="res://Objects/UI/PauseMenu/PauseMenu.tscn" id="6_ca1ba"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3lmw5"]
+font_size = 32
+font_color = Color(0.992157, 0.862745, 0.690196, 1)
+outline_size = 8
+outline_color = Color(0.25098, 0.105882, 0, 1)
+
+[node name="LevelTemplate" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_5w1s3")]
+position = Vector2(352, 464)
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = ExtResource("2_kg031")
+cell_quadrant_size = 8
+format = 2
+layer_0/name = "Underground"
+layer_0/modulate = Color(0.513726, 0.513726, 0.513726, 1)
+layer_1/name = "Background"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array()
+layer_2/name = "Positive"
+layer_2/enabled = true
+layer_2/modulate = Color(0, 0.858824, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+layer_3/name = "Negative"
+layer_3/enabled = true
+layer_3/modulate = Color(0.819608, 0.133333, 0.133333, 1)
+layer_3/y_sort_enabled = false
+layer_3/y_sort_origin = 0
+layer_3/z_index = 0
+layer_3/tile_data = PackedInt32Array()
+layer_4/name = "Foreground"
+layer_4/enabled = true
+layer_4/modulate = Color(1, 1, 1, 1)
+layer_4/y_sort_enabled = false
+layer_4/y_sort_origin = 0
+layer_4/z_index = 0
+layer_4/tile_data = PackedInt32Array()
+layer_5/name = "Unseen"
+layer_5/enabled = true
+layer_5/modulate = Color(1, 1, 1, 0.545098)
+layer_5/y_sort_enabled = false
+layer_5/y_sort_origin = 0
+layer_5/z_index = -5
+layer_5/tile_data = PackedInt32Array()
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.956863, 0.913725, 0.980392, 1)
+z_index = -100
+position = Vector2(1312, 492)
+scale = Vector2(1.28125, 1.28125)
+texture = ExtResource("3_r0jli")
+
+[node name="Background2" type="Sprite2D" parent="."]
+modulate = Color(0.956863, 0.913725, 0.980392, 1)
+z_index = -100
+position = Vector2(3904, 492)
+scale = Vector2(1.28125, 1.28125)
+texture = ExtResource("3_r0jli")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Runes" type="HBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 256.0
+offset_bottom = 48.0
+
+[node name="Coin" type="NinePatchRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 48.0
+texture = ExtResource("4_88gei")
+region_rect = Rect2(0, 2, 8, 8)
+
+[node name="CoinNum" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 11.0
+offset_right = 1104.0
+offset_bottom = 62.0
+text = "0"
+label_settings = SubResource("LabelSettings_3lmw5")
+horizontal_alignment = 2
+
+[node name="LevelFinished" parent="CanvasLayer" instance=ExtResource("5_0e18q")]
+visible = false
+level_num = 1
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_ca1ba")]
+visible = false

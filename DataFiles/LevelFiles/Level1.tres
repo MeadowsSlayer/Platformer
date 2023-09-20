@@ -1,10 +1,11 @@
-[gd_resource type="Resource" script_class="LevelsData" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="LevelsData" load_steps=2 format=3 uid="uid://6cepxqnmrshg"]
 
 [ext_resource type="Script" path="res://GeneralScripts/LevelsData.gd" id="1_lp0ao"]
 
 [resource]
 script = ExtResource("1_lp0ao")
 level_num = 1
+level_name = "The Start"
 level_cleared = true
 max_coins_collected = 13
 max_coins_on_a_level = 13

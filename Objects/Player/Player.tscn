@@ -21,6 +21,7 @@ sprite_frames = ExtResource("1_say5y")
 animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(112, 0)
 zoom = Vector2(2, 2)
 process_callback = 0
 position_smoothing_enabled = true

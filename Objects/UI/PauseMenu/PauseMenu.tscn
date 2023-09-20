@@ -54,11 +54,6 @@ custom_minimum_size = Vector2(256, 56)
 layout_mode = 2
 text = "Restart"
 
-[node name="ToLevelMenu" type="Button" parent="VBoxContainer"]
-custom_minimum_size = Vector2(256, 56)
-layout_mode = 2
-text = "Level Menu"
-
 [node name="ToMainMenu" type="Button" parent="VBoxContainer"]
 custom_minimum_size = Vector2(256, 56)
 layout_mode = 2
@@ -66,21 +61,23 @@ text = "Main Menu"
 
 [node name="Tips" type="Label" parent="."]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 416.0
-offset_right = 440.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 432.0
 offset_bottom = 640.0
 text = "Controls List:
 AD - Left/Right Movement
 Space - Jump
 ESC - Pause
-R - Restart
-Right Mouse Click - Red Platforms
-Left Mouse Click - Blue Platforms"
+O - Restart
+R - Red Platforms
+B - Blue Platforms
+G - Reverse Gravity
+F - Normalize Gravity"
 label_settings = ExtResource("2_tkq7n")
+vertical_alignment = 2
 
 [connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="VBoxContainer/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="VBoxContainer/ToLevelMenu" to="." method="_on_to_level_menu_pressed"]
 [connection signal="pressed" from="VBoxContainer/ToMainMenu" to="." method="_on_to_main_menu_pressed"]

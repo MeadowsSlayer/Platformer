@@ -1,53 +1,72 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690904732
+::res://::1694801062
 icon.svg::CompressedTexture2D::9164202520055673838::1690711847::1690711856::1::::<><>::
 README.md::TextFile::-1::1690712158::0::1::::<><>::
-::res://DataFiles/::1690896913
-::res://DataFiles/LevelFiles/::1690902866
-Level1.tres::Resource/Resource::-1::1690903507::0::1::::<><>::res://GeneralScripts/LevelsData.gd
-::res://GeneralScripts/::1690898504
-GameData.gd::GDScript::-1::1690895933::0::1::::GameData<>Resource<>::
-LevelsData.gd::GDScript::-1::1690898504::0::1::::LevelsData<>Resource<>::
-::res://Objects/::1690893896
+::res://DataFiles/::1694513444
+GameData.tres::Resource/GameData::-1::1694801033::0::1::::<><>::res://GeneralScripts/GameData.gd
+::res://DataFiles/LevelFiles/::1694617366
+Level1.tres::Resource/Resource::2180253796528072484::1694617366::0::1::::<><>::res://GeneralScripts/LevelsData.gd
+Level2.tres::Resource/Resource::521523701312770985::1694617366::0::1::::<><>::res://GeneralScripts/LevelsData.gd
+::res://GeneralScripts/::1694511776
+GameData.gd::GDScript::-1::1694509335::0::1::::GameData<>Resource<>::
+LevelsData.gd::GDScript::-1::1694511775::0::1::::LevelsData<>Resource<>::
+::res://Objects/::1694525556
 Flag.tscn::PackedScene::7651543848040256122::1690817678::0::1::::<><>::uid://bht7a0iarn5pl
+::res://Objects/Dangers/::1690913272
+Spike.tscn::PackedScene::2702695603909177578::1690913272::0::1::::<><>::uid://br5vor61vvsn3
 ::res://Objects/Pickable Items/::1690817678
 Coin.tscn::PackedScene::7168357103854646958::1690817678::0::1::::<><>::uid://b2yphv7t2uhhp
 Rune.tscn::PackedScene::440903387949813706::1690817678::0::1::::<><>::uid://3md2q08jh76
-::res://Objects/Player/::1690904725
-Player.gd::GDScript::-1::1690895409::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::6877438016869502249::1690904725::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
-::res://Objects/UI/::1690893898
+::res://Objects/Player/::1694636004
+Player.gd::GDScript::-1::1694617078::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::6877438016869502249::1694636004::0::1::::<><>::res://Objects/Player/Player.gd<>uid://babv5jqi3y8qq::::res://Resources/SpriteFrames/PlayerSF.tres
+::res://Objects/Templates/::1694617079
+level_template.tscn::PackedScene::1506086521353648353::1694617079::0::1::::<><>::uid://c48qntvlfi1ar
+::res://Objects/UI/::1690911660
 rune_active.tscn::PackedScene::6915357061577864717::1690817678::0::1::::<><>::uid://bgndst3e1jflg
 rune_unactive.tscn::PackedScene::6494767210482007380::1690817678::0::1::::<><>::uid://bgndst3e1jflg
-::res://Objects/UI/LevelFinished/::1690904725
-LevelFinished.gd::GDScript::-1::1690898587::0::1::::<>Control<>::
-LevelFinished.tscn::PackedScene::7327131354274997530::1690904725::0::1::::<><>::res://Objects/UI/LevelFinished/LevelFinished.gd<>uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>uid://cix0f1xgo2cyw::::res://Resources/LabelSettings/UITextMid.tres
-::res://Resources/::1690904725
-DefaultTheme.tres::Theme::4666278017305317150::1690904725::0::1::::<><>::uid://dfyq21r54c8tn::::res://Resources/ButtonStyles/ButtonDisabled.tres<>uid://wlkw2tba4ejm::::res://Resources/ButtonStyles/ButtonHover.tres<>uid://docngvoj8g75m::::res://Resources/ButtonStyles/ButtonNormal.tres<>uid://cro4ur8d7y4lb::::res://Resources/ButtonStyles/ButtonPressed.tres
+::res://Objects/UI/LevelFinished/::1694617079
+LevelFinished.gd::GDScript::-1::1694509295::0::1::::<>Control<>::
+LevelFinished.tscn::PackedScene::7327131354274997530::1694617079::0::1::::<><>::res://Objects/UI/LevelFinished/LevelFinished.gd<>uid://ci66l5ahhxo0c
+::res://Objects/UI/PauseMenu/::1694636004
+PauseMenu.gd::GDScript::-1::1690914209::0::1::::<>Control<>::
+PauseMenu.tscn::PackedScene::1463665303589367392::1694636004::0::1::::<><>::uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>res://Objects/UI/PauseMenu/PauseMenu.gd<>uid://cix0f1xgo2cyw::::res://Resources/LabelSettings/UITextMid.tres
+::res://Resources/::1694636004
+DefaultTheme.tres::Theme::4666278017305317150::1694505624::0::1::::<><>::uid://dfyq21r54c8tn
 DefaultTileset.tres::TileSet::1210620544307270007::1690740938::0::1::::<><>::uid://0k7iri8lo0qo
 Hardpixel-nn51.otf::FontFile::1180842688909966634::1591843566::1690904698::1::::<><>::
-KindaCuteForestTileset.tres::TileSet::8290793788592374965::1690904070::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
-::res://Resources/ButtonStyles/::1690904482
+KindaCuteForestTileset.tres::TileSet::8290793788592374965::1694636004::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png<>uid://dcsvh3w1qq8u3::::res://Sprites/kinda_cute_forest/treedeco.png
+::res://Resources/ButtonStyles/::1690905339
 ButtonDisabled.tres::StyleBoxTexture::7560772416957308023::1690903455::0::1::::<><>::uid://c0evnoblusik4
 ButtonHover.tres::StyleBoxTexture::1567510620253260310::1690903447::0::1::::<><>::uid://c0evnoblusik4
-ButtonNormal.tres::StyleBoxTexture::8146835778260176104::1690904482::0::1::::<><>::uid://c0evnoblusik4::::res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet/gui_paper_animated_button1.png
-ButtonPressed.tres::StyleBoxTexture::5996750450513459275::1690903373::0::1::::<><>::uid://c0evnoblusik4
-::res://Resources/LabelSettings/::1690904115
-UITextBig.tres::LabelSettings::5400251273403856148::1690904070::0::1::::<><>::uid://cjjhqrviqyxsl::::res://Sprites/GUI_Essential_Free_v1.1/Font/TTF/Toriko.ttf
-UITextMid.tres::LabelSettings::5383361060052513030::1690904070::0::1::::<><>::
-WorldText.tres::LabelSettings::6544158630561557426::1690904115::0::1::::<><>::
-::res://Resources/SpriteFrames/::1690904070
-Coin.tres::SpriteFrames::4331988936790484169::1690904070::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
-Flag.tres::SpriteFrames::2918910035720443129::1690904070::0::1::::<><>::uid://drpg53hgt15h8::::res://Sprites/SwampTileset/4 Animated objects/Flag.png
-PlayerSF.tres::SpriteFrames::2389814189941308212::1690904070::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
-Rune.tres::SpriteFrames::58537982436258163::1690904070::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
+ButtonNormal.tres::StyleBoxTexture::8146835778260176104::1690905299::0::1::::<><>::uid://c0evnoblusik4
+ButtonPressed.tres::StyleBoxTexture::5996750450513459275::1690905339::0::1::::<><>::uid://c0evnoblusik4
+::res://Resources/LabelSettings/::1694636004
+UITextBig.tres::LabelSettings::5400251273403856148::1694636004::0::1::::<><>::
+UITextMid.tres::LabelSettings::5383361060052513030::1694636004::0::1::::<><>::
+UITextMidPlus.tres::LabelSettings::1374525531547373788::1694636004::0::1::::<><>::
+UITextSmall.tres::LabelSettings::1212515209823008444::1694636004::0::1::::<><>::
+WorldText.tres::LabelSettings::6544158630561557426::1694636004::0::1::::<><>::
+::res://Resources/SpriteFrames/::1694636004
+Coin.tres::SpriteFrames::4331988936790484169::1694636004::0::1::::<><>::uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png
+Flag.tres::SpriteFrames::2918910035720443129::1694617202::0::1::::<><>::uid://drpg53hgt15h8
+PlayerSF.tres::SpriteFrames::2389814189941308212::1694636004::0::1::::<><>::uid://bntvh3vy3t2c1::::res://Sprites/AnimationSheet_Character.png
+Rune.tres::SpriteFrames::58537982436258163::1694636004::0::1::::<><>::uid://djipwetip16fa::::res://Sprites/SwampTileset/4 Animated objects/Rune.png
+Spikes.tres::SpriteFrames::3642863358120329238::1694636004::0::1::::<><>::uid://bwe6n0o6ds5yk::::res://Sprites/kinda_cute_forest/tileset.png
 ::res://Scenes/::1690712469
-::res://Scenes/Levels/::1690712481
-::res://Scenes/Levels/Level1/::1690904725
-Level1.tscn::PackedScene::8539346648995564901::1690904725::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn<>uid://c0iblpbbtl3cw::::res://Resources/LabelSettings/WorldText.tres<>uid://daen2ac4h3pd3::::res://Objects/Pickable Items/Coin.tscn<>uid://dhap2rrwhgacw::::res://Objects/Flag.tscn<>uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png<>uid://dcnk1vbajmd4e::::res://Objects/UI/LevelFinished/LevelFinished.tscn
-::res://Scenes/MainMenu/::1690904725
-MainMenu.tscn::PackedScene::1114247250053051678::1690904725::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>uid://q3akonfjeelu::::res://Resources/Hardpixel-nn51.otf
-::res://Sprites/::1690740355
+::res://Scenes/Levels/::1694525146
+::res://Scenes/Levels/Level1/::1694617202
+Level1.tscn::PackedScene::8539346648995564901::1694617202::0::1::::<><>::uid://dx10oqunht36r
+::res://Scenes/Levels/Level2/::1694636004
+Level2.tscn::PackedScene::306100202851173143::1694636004::0::1::::<><>::uid://c48qntvlfi1ar::::res://Objects/Player/Player.tscn<>uid://dqeefry5jjtj6::::res://Resources/KindaCuteForestTileset.tres<>uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>uid://gjtu5hx1nm8q::::res://Objects/Pickable Items/Rune.tscn<>uid://bi1wk1kbiio5w::::res://Sprites/SwampTileset/4 Animated objects/Coin.png<>uid://c0iblpbbtl3cw::::res://Resources/LabelSettings/WorldText.tres<>uid://daen2ac4h3pd3::::res://Objects/Pickable Items/Coin.tscn<>uid://dcnk1vbajmd4e::::res://Objects/UI/LevelFinished/LevelFinished.tscn<>uid://berhab85w5yus::::res://Objects/Dangers/Spike.tscn<>uid://u4ama5b8lylc::::res://Objects/UI/PauseMenu/PauseMenu.tscn
+::res://Scenes/MainMenu/::1694636004
+CreditTextsLinks.gd::GDScript::-1::1694506054::0::1::::<>RichTextLabel<>::
+DialogueWindowLevels.gd::GDScript::-1::1694513201::0::1::::<>Control<>::
+LevelsBox.gd::GDScript::-1::1694520570::0::1::::<>Button<>::
+LevelsPicker.gd::GDScript::-1::1694508749::0::1::::<>Control<>::
+MainMenu.gd::GDScript::-1::1694511018::0::1::::<>Control<>::
+MainMenu.tscn::PackedScene::1114247250053051678::1694636004::0::1::::<><>::uid://dx10oqunht36r::::res://Sprites/Windrise Background/windrise-background.png<>res://Scenes/MainMenu/MainMenu.gd<>uid://ci66l5ahhxo0c::::res://Resources/LabelSettings/UITextBig.tres<>uid://to5adqq15c67::::res://Sprites/GUI_Essential_Free_v1.1/2.Paper Collection/Paper Theme/Spritesheet/gui_paper_animated_button2.png<>res://Scenes/MainMenu/LevelsPicker.gd<>uid://cix0f1xgo2cyw::::res://Resources/LabelSettings/UITextMid.tres<>res://Scenes/MainMenu/LevelsBox.gd<>uid://b7qm6gjmna6ek::::res://Resources/DefaultTheme.tres<>res://Scenes/MainMenu/CreditTextsLinks.gd<>uid://bkkxruf4eql0c::::res://Sprites/Levels/Level1.png<>uid://rjl7ikfb44bo::::res://Resources/LabelSettings/UITextSmall.tres<>res://Scenes/MainMenu/DialogueWindowLevels.gd<>uid://tt3h8kaseo8c::::res://Resources/LabelSettings/UITextMidPlus.tres
+::res://Sprites/::1694506989
 AnimationSheet_Character.png::CompressedTexture2D::3339387889943430242::1690717039::1690717272::1::::<><>::
 Heart&ManaUi.png::CompressedTexture2D::2834605993007682680::1690717067::1690717272::1::::<><>::
 ::res://Sprites/GUI_Essential_Free_v1.1/::1690717267
@@ -87,6 +106,8 @@ readme.txt::TextFile::-1::1581949160::0::1::::<><>::
 scene.png::CompressedTexture2D::4757146039349929021::1581948806::1690740357::1::::<><>::
 tileset.png::CompressedTexture2D::3940739532966842194::1581948602::1690740357::1::::<><>::
 treedeco.png::CompressedTexture2D::7338087601176745224::1581948642::1690740357::1::::<><>::
+::res://Sprites/Levels/::1694507001
+Level1.png::CompressedTexture2D::3110380806458674592::1694506997::1694507001::1::::<><>::
 ::res://Sprites/SwampTileset/::1690717267
 Font.txt::TextFile::-1::1578570670::0::1::::<><>::
 License.txt::TextFile::-1::1583493057::0::1::::<><>::

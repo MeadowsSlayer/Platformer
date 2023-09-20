@@ -17,6 +17,7 @@ var new_record = false
 @onready var timer = $Timer
 @onready var coins_text = $Coins
 @onready var new_record_ui = $"New Record"
+@onready var game_data = preload("res://DataFiles/GameData.tres")
 
 func _ready():
 	level_file = load(str("res://DataFiles/LevelFiles/Level", level_num, ".tres"))
@@ -29,6 +30,7 @@ func _ready():
 func FinishLevel(coins):
 	timer.stop()
 	self.visible = true
+	game_data.MaxLevelOverwrite(level_num)
 	if coins != max_coins:
 		coins_text.text = str(coins, " coins collected out of ", max_coins)
 		new_record = SaveTimeNotAllCoins(coins)

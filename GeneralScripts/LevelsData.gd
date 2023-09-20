@@ -3,6 +3,7 @@ extends Resource
 
 # General Info
 @export var level_num = 0
+@export var level_name = "The Start"
 @export var level_cleared = false
 @export var max_coins_collected = 0
 @export var max_coins_on_a_level = 0

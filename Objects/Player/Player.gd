@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var limit_bottom = 0
 @export var limit_right = 0
 @export var limit_left = 0
+@export var gravity_lock = false
 
 const JUMP_VELOCITY = -500.0
 const ACCELERATION = 20
@@ -12,6 +13,7 @@ const MAX_SPEED = 250.0
 var speed = 0.0
 var jumps = 1
 var gravity = 0
+var gravity_mod = 1
 var runes = 0
 var coins = 0
 var current_color = "none"
@@ -58,7 +60,7 @@ func _physics_process(delta):
 		if jumps > 0 and coyote_time == true:
 			coyote_timer.start()
 		
-		velocity.y += gravity * delta
+		velocity.y += gravity * delta * gravity_mod
 	else:
 		jumps = 1
 		gravity = 0
@@ -74,12 +76,12 @@ func _physics_process(delta):
 		if not is_on_floor():
 			jump_buff = true
 			jump_buffer_timer.start()
-	if Input.is_action_just_released("jump") and velocity.y < -100:
-		velocity.y = -100
+	if Input.is_action_just_released("jump") and velocity.y * gravity_mod < -100:
+		velocity.y = -100  * gravity_mod
 		mid_air = true
 		mid_air_timer.start()
 	
-	if velocity.y == JUMP_VELOCITY:
+	if velocity.y == JUMP_VELOCITY * gravity_mod:
 		mid_air = true
 		mid_air_timer.start()
 
@@ -101,6 +103,8 @@ func _physics_process(delta):
 		if falling == false and jumping == false:
 			sprite.play("run")
 		sprite.scale.x = direction * 2
+		if (direction < 0 and camera_2d.position.x > 0) or (direction > 0 and camera_2d.position.x < 0):
+			camera_2d.position.x = camera_2d.position.x * -1
 
 	move_and_slide()
 
@@ -108,9 +112,11 @@ func Jump():
 	jumps -= 1
 	jumping = true
 	sprite.play("jump")
-	velocity.y = JUMP_VELOCITY
+	velocity.y = JUMP_VELOCITY * gravity_mod
 
 func _input(event):
+	#Actions
+	##Red/Blue
 	if event.is_action_pressed("Blue") and runes > 0 and current_color != "blue" and level_finished == false:
 		tile_map.set_layer_enabled(2, true)
 		tile_map.set_layer_enabled(3, false)
@@ -121,6 +127,18 @@ func _input(event):
 		tile_map.set_layer_enabled(3, true)
 		current_color = "red"
 		RunesChanged(-1)
+	##Gravity Reversal
+	if event.is_action_pressed("GReverse") and gravity_lock == false and runes > 0:
+		self.up_direction.y = 1
+		gravity_mod = -1
+		self.scale.y = -1
+		RunesChanged(-1)
+	if event.is_action_pressed("GReverseCancel") and gravity_lock == false and gravity_mod == -1:
+		self.up_direction.y = -1
+		gravity_mod = 1
+		self.scale.y = 1
+	
+	#Menu Options
 	if event.is_action_pressed("restart"):
 		get_tree().reload_current_scene()
 	if event.is_action_pressed("pause"):

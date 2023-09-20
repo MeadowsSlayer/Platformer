@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LevelsData" load_steps=2 format=3 uid="uid://hovois4l88j2"]
+
+[ext_resource type="Script" path="res://GeneralScripts/LevelsData.gd" id="1_lp0ao"]
+
+[resource]
+script = ExtResource("1_lp0ao")
+level_num = 2
+level_name = "The Gravity"
+level_cleared = false
+max_coins_collected = 0
+max_coins_on_a_level = 0
+min_time_min_all_coins = 10000
+min_time_sec_all_coins = 60
+min_time_min_not_all_coins = 10000
+min_time_sec_not_all_coins = 60
+coins_min_time_not_all_coins = 0

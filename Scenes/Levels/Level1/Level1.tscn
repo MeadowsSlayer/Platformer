@@ -247,6 +247,7 @@ limit_top = -352
 limit_bottom = 848
 limit_right = 2688
 limit_left = -448
+gravity_lock = true
 
 [node name="Rune" parent="." instance=ExtResource("4_oh64o")]
 position = Vector2(864, 552)
@@ -368,9 +369,9 @@ offset_left = 1392.0
 offset_top = 496.0
 offset_right = 1584.0
 offset_bottom = 671.0
-text = "press left mouse button to use rune to activate the blue platforms
+text = "press B key to use rune to activate the blue platforms
 
-You can also restart level by pressing R"
+You can also restart level by pressing O"
 label_settings = ExtResource("5_c1dfw")
 autowrap_mode = 3
 clip_text = true
@@ -382,7 +383,7 @@ offset_left = 1432.0
 offset_top = 232.0
 offset_right = 1832.0
 offset_bottom = 336.0
-text = "press right mouse button to use rune to activate red platforms
+text = "press r key to use rune to activate red platforms
 only one color can be active at a time"
 label_settings = ExtResource("5_c1dfw")
 horizontal_alignment = 1
@@ -423,6 +424,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Runes" type="HBoxContainer" parent="CanvasLayer/UI"]
 layout_mode = 0
